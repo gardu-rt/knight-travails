@@ -24,6 +24,10 @@ function knightMoves(start, target) {
     const [x, y] = position;
 
     if (x === target[0] && y === target[1]) {
+      console.log(`You made it in ${path.length} moves! Here's your path:`);
+      for (const pos of path) {
+        console.log(pos);
+      }
       return path;
     }
 
@@ -44,3 +48,7 @@ function knightMoves(start, target) {
     }
   }
 }
+
+knightMoves([0, 0], [3, 3]);
+knightMoves([3, 3], [0, 0]);
+knightMoves([0, 0], [7, 7]);
